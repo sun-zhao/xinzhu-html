@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>家庭投资月报</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <style type="text/css">
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+            font-size: 26px;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.5em;
+        }
+
+        .color-black {
+            color: #000;
+        }
+
+        .color-light {
+            color: #666;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .color-info {
+            color: #0baf50;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .data-main {
+            width: 65%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .font30 {
+            font-size: 44px;
+        }
+
+        .font24 {
+            font-size: 38px;
+        }
+
+        .data-box {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .margin-top10 {
+            margin-top: 10px;
+        }
+
+        .margin-top20 {
+            margin-top: 20px;
+        }
+        .margin-top40 {
+            margin-top: 40px;
+        }
+        .title-tag {
+            border-bottom: 2px solid #f48580;
+            padding-bottom: 5px;
+        }
+
+        .title-tag span {
+            display: inline-block;
+            padding-left: 5px;
+            vertical-align: baseline;
+        }
+        .table-box {
+            background: #f4f4f4;
+        }
+        .table-box tbody tr:first-child td {
+            width: 25%;
+        }
+        .table-box tbody tr:first-child td:last-child {
+            width: 6%;
+        }
+        .table-box tbody tr:last-child td:first-child {
+            text-align: left;
+            text-indent: 20px;
+            font-weight: bold;
+        }
+
+        .table-box th, .table-box td {
+            border: 1px solid #fff;
+            font-size: 28px;
+            height: 30px;
+            line-height: 40px;
+            text-align: center;
+            vertical-align: middle;
+
+        }
+
+        .table-box thead tr:first-child th {
+            border-bottom: 2px solid #fff;
+            height: 40px;
+            line-height: 40px;
+            font-size: 26px;
+        }
+
+        .theme1 thead th, .theme2 thead th, .theme3 thead th {
+            color: #fff;
+            font-weight: bold;
+            background: #e8968f;
+        }
+
+        .theme1 thead tr:last-child th {
+            background: #efb5b1;
+        }
+
+        .theme1 tbody tr:last-child td {
+            background: #f8dfdd;
+        }
+
+        .theme2 thead th {
+            background: #274189;
+        }
+
+        .theme2 thead tr:last-child th {
+            background: #687aac;
+        }
+
+        .theme2 tbody tr:last-child td {
+            background: #bec6db;
+        }
+
+        .theme3 thead th {
+            background: #f8ca4b;
+        }
+
+        .theme3 thead tr:last-child th {
+            background: #fada81;
+        }
+
+        .theme3 tbody tr:last-child td {
+            background: #fceec8;
+        }
+
+        .table-box thead tr:first-child th {
+            border-bottom: 2px solid #fff;
+            height: 40px;
+            line-height: 40px;
+            font-size: 28px;
+        }
+
+        .theme1 thead th, .theme2 thead th, .theme3 thead th {
+            color: #fff;
+            font-weight: bold;
+            background: #e8968f;
+        }
+        .theme1 thead th:last-child, .theme2 thead th:last-child, .theme3 thead th:last-child{
+            width: 15%;
+        }
+        .theme1 thead tr:last-child th {
+            background: #efb5b1;
+        }
+
+        .theme1 tbody tr:last-child td {
+            background: #f8dfdd;
+        }
+
+        .theme2 thead th {
+            background: #274189;
+        }
+
+        .theme2 thead tr:last-child th {
+            background: #687aac;
+        }
+
+        .theme2 tbody tr:last-child td {
+            background: #bec6db;
+        }
+
+        .theme3 thead th {
+            background: #f8ca4b;
+        }
+
+        .theme3 thead tr:last-child th {
+            background: #fada81;
+        }
+
+        .theme3 tbody tr:last-child td {
+            background: #fceec8;
+        }
+
+        .artice-header {
+            padding-left: 20px;
+        }
+
+        .artice-header span {
+            display: inline-block;
+            height: 70px;
+            line-height: 70px;
+            background: #e9958f;
+            font-size: 30px;
+            color: #fff;
+            margin-left: -7px;
+            padding: 0 30px;
+            position: relative;
+        }
+
+        .artice-header span:first-child::before {
+            content: '';
+            border: 15px solid transparent;
+            border-bottom: 12px solid #e9958f;
+            position: absolute;
+            left: -15px;
+            bottom: 0;
+        }
+
+        .artice-header span.span2::before {
+            border: 15px solid transparent;
+            border-bottom: 12px solid #274189;
+        }
+
+        .artice-header .span1 {
+            background: #e9958f;
+            width: 40%;
+        }
+
+        .artice-header .span2 {
+            background: #274189;
+            width: 48%;
+        }
+
+        .article-main {
+            border-bottom: 3px solid #e99590;
+            padding: 20px 0;
+            color: #777;
+        }
+
+        .article-main p {
+            font-size: 28px;
+        }
+
+        .article-main .text-bold {
+            padding-bottom: 10px;
+        }
+
+        .article-main .font20 img {
+            vertical-align: -3px;
+            margin-right: 5px;
+        }
+
+        .title-tag span {
+            display: inline-block;
+            padding-left: 5px;
+            vertical-align: 6px;
+            font-size: 28px;
+            color: #9d824e;
+        }
+
+        .article-text {
+            color: #000;
+        }
+        .progress-inner{
+            height:40px;
+            line-height: 40px;
+            background: #d7d8da;
+        }
+        .p-left,.p-right{float: left;height:40px;line-height:40px;font-size: 20px;text-align: center;}
+        .p-left{background: #f5908c;color:#fff;position: relative}
+        .people{position: absolute;right:-20px;top:-10px;}
+        .item{background: #f6f4f7;border-top:6px solid #f48580;text-align: center;}
+        .active{border-top-color:#f8b06e;background: #ffe080;}
+        .data-broad{width: 100%;}
+        .data-broad .item{padding:40px 0;margin-top:30px;}
+        .data-broad tr td{width: 50%;}
+        .data-broad tr td:first-child .item{margin-right:15px;}
+        .data-broad tr td:last-child .item{margin-left:15px;}
+        .g-title{margin-top:20px;color:#a6a6a6;background: url("img/pencil.jpg") no-repeat left center;padding-left:30px;}
+        .g-txt{margin-top:10px;}
+        .info{
+            padding:20px;
+            border:2px solid #e78885;
+            color:#e78885;
+        }
+
+    </style>
+</head>
+<body>
+<div class="data-main">
+    <p><img src="img/logo.png" width="200"></p>
+    <div class="artice-header margin-top20 text-bold text-center">
+        <span class="span2">新竹理财季度报告</span>
+        <span class="span1">2020年第1季度</span>
+    </div>
+    <p class="font30 text-center color-black margin-top20">刘德华家庭投资月报</p>
+    <p class="text-center color-light" style="border-bottom: 2px dotted #ddd;padding-bottom: 10px;">2019年12月</p>
+    <p class="color-info" style="padding-top: 30px;">刘德华先生/女士，您好！</p>
+    <!--<p>截止2019年12月，我们已经与您走过了384个日子，您家庭目前水位为598万人民币。您的投资组合方案稳定执行，契合市场走向，之后将持续执行。具体家庭投资月报如下：</p>-->
+    <p style="padding-top:10px;">本报告是新竹理财为您提供的投资方案季度跟踪情况。您目前的<span class="color-info">规划成本金额为xx万元。投资组合市值为xx万元。</span>
+    </p>
+    <div class="progress-bar margin-top20">
+        <p class="text-right">注：1825天=（365天x5年）</p>
+        <div class="progress-inner margin-top10">
+            <div class="p-left" style="width: 40%;">已持续投资：<span class="color-info">155天</span><img class="people" src="img/people.png"></div>
+            <div class="p-right" style="width: 60%;">1670天</div>
+        </div>
+    </div>
+    <table class="data-broad margin-top20">
+        <tr>
+            <td>
+                <div class="item">
+                    <p>目标收益</p>
+                    <p><span class="color-info">8-10%</span>（复合年化）</p>
+                </div>
+            </td>
+            <td>
+                <div class="item">
+                    <p>下行波动</p>
+                    <p><span class="color-info">-15%</span>（年内）</p>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div class="item">
+                    <p>极端情况</p>
+                    <p><span class="color-info">-20-25%</span>（年内）</p>
+                </div>
+            </td>
+            <td>
+                <div class="item active">
+                    <p>目前组合收益</p>
+                    <p><span class="color-info">5.11%</span></p>
+                </div>
+            </td>
+        </tr>
+    </table>
+    <p class="margin-top20" style="padding:40px 0;"><img src="img/11.jpg" style="width: 100%;"></p>
+    <p class="title-tag margin-top20 text-bold font24"><img src="img/icon-1.png" width="33"><span>账户状态</span></p>
+    <div class="data-box margin-top10">
+        <p class=" text-center"><img src="img/1.png"></p>
+    </div>
+    <div class="margin-top20">
+        <table class="table-box theme1" width="100%">
+            <thead>
+            <tr>
+                <th colspan="4">权益类</th>
+            </tr>
+            <tr>
+                <th>产品名称</th>
+                <th>份额</th>
+                <th>市值</th>
+                <th>盈亏率</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">小记</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="margin-top20">
+        <table class="table-box theme2" width="100%">
+            <thead>
+            <tr>
+                <th colspan="4">债类+衍生品类</th>
+            </tr>
+            <tr>
+                <th>产品名称</th>
+                <th>份额</th>
+                <th>市值</th>
+                <th>盈亏率</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">小记</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="margin-top20">
+        <table class="table-box theme3" width="100%">
+            <thead>
+            <tr>
+                <th colspan="4">账户情况</th>
+            </tr>
+            <tr>
+                <th>产品名称</th>
+                <th>份额</th>
+                <th>市值</th>
+                <th>盈亏率</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>权益类</td>
+                <td>293637</td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>债类+衍生品类</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>现金类</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="2">小记</td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="text-right margin-top20">
+        <p>［现金类］类别中会存在其他产品到期后回款的资金，所以不存在“成本”和“盈亏”的概念</p>
+        <p>以上盈亏情况以11月29号基金公司公布净值为准</p>
+        <p>单位：元</p>
+    </div>
+    <p class="margin-top20"><img src="img/22.jpg" style="width: 100%;"></p>
+    <p class="margin-top20"><img src="img/33.jpg" style="width: 100%;"></p>
+    <p class="margin-top20"><img src="img/44.jpg" style="width: 100%;"></p>
+    <p class="title-tag margin-top20 text-bold font24"><img src="img/icon-1.png" width="33"><span>重要沟通</span></p>
+    <div class="gou-tong">
+        <p class="g-title">请确认本报告中关于您组合收益及运行评价等信息。</p>
+        <div class="margin-top40">
+            <p class="g-title">近期您的家庭情况是否发生变化？。</p>
+            <p class="g-txt">如：生活上，家庭成员发生变动，生活环境偏好改变；工作上，家庭收入增加/减少、职位调动或更换单位等 </p>
+        </div>
+        <div class="margin-top40">
+            <p class="g-title">近期是否有大额资金变动？</p>
+            <p class="g-txt">如：规划外的其他产品到期，其他预期外的大额收入/ 支出等 </p>
+        </div>
+        <div class="margin-top40">
+            <p class="g-title">您的投资预期有无变化？</p>
+            <p class="g-txt">如：您现在选择的方案是权益类：债类+衍生品类=<span class="color-info">50%：50%</span>。因个人偏好及风险承受等原因想要更改预期收益与投资配置比例等 </p>
+        </div>
+    </div>
+    <p class="info margin-top20">如有上述情况，请与您的理财顾问杜雨静联系，以便对您的需求做出调整。</p>
+    <p><img src="img/55.jpg" style="width: 100%;"></p>
+    <div class="artice-header margin-top20 text-bold text-center">
+        <span class="span2">专业创造价值</span>
+        <span class="span1">新竹伴您财富成长</span>
+    </div>
+</div>
+</body>
+</html>

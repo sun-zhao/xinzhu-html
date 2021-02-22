@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+    <title>家庭投资月报</title>
+    <style type="text/css">
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.5em;
+        }
+
+        .color-black {
+            color: #000;
+        }
+
+        .color-light {
+            color: #666;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .data-main {
+            width: 50%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .font30 {
+            font-size: 30px;
+        }
+
+        .font24 {
+            font-size: 20px;
+        }
+
+        .data-box {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .margin-top10 {
+            margin-top: 10px;
+        }
+
+        .margin-top20 {
+            margin-top: 20px;
+        }
+
+        .title-tag {
+            border-bottom: 2px solid #f48580;
+            padding-bottom: 5px;
+        }
+
+        .title-tag span {
+            display: inline-block;
+            padding-left: 5px;
+            vertical-align: baseline;
+        }
+
+        .table-box {
+            background: #f4f4f4;
+        }
+        .table-box tbody tr:first-child td{
+            width: 25%;
+        }
+
+        .table-box th,.table-box td{
+            border:1px solid #fff;
+            font-size: 14px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+        }
+        .table-box thead tr:first-child th{
+            border-bottom:2px solid #fff;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+        }
+        .table-box.theme1 thead tr th,.table-box.theme1 tbody tr td{
+            width: 20%;
+        }
+
+        .theme1 thead th,.theme2 thead th{
+            color:#fff;
+            font-weight: bold;
+            background: #e8968f;
+        }
+        .theme2 thead th{
+            background: #274189;
+        }
+        .theme2 thead tr:last-child th{
+            background:#687aac;
+        }
+        .float-left{float: left;}
+        .float-right{float:right;}
+        .artice-header span{
+            display: inline-block;
+            height:50px;
+            line-height:50px;
+            background: #e9958f;
+            font-size:28px;
+            color:#fff;
+            margin-left:-5px;
+            padding:0 30px;
+            position: relative;
+        }
+        .artice-header span:first-child::before{
+            content: '';
+            border:15px solid transparent;
+            border-bottom:12px solid #e9958f;
+            position: absolute;
+            left:-15px;
+            bottom:0;
+        }
+        .artice-header span.span2::before{
+            border:15px solid transparent;
+            border-bottom:12px solid #274189;
+        }
+        .artice-header .span1{
+            background:#e9958f;
+        }
+        .artice-header .span2{
+            background:#274189;
+        }
+    </style>
+</head>
+<body>
+<div class="data-main">
+    <p><img src="img/logo.png" width="200"></p>
+    <p class="font30 text-center color-black">xx家庭投资调整方案</p>
+    <p class="text-center color-light" style="border-bottom: 2px dotted #ddd;padding-bottom: 10px;">2019年12月21日</p>
+    <p class="color-black" style="padding-top: 30px;">刘德华先生/女士，</p>
+    <p style="padding-top:10px;">您好！</p>
+    <p>近期，市场回调到了一定阶段，我们判断市场见底的时间会比之前预期的早，另外贸易战对市场的影响有限，故增加您对股权类的投资，具体调整方式如下：</p>
+    <p class="title-tag margin-top20 text-bold font24"><img src="img/icon-1.png" width="22"><span>2019年6月21日申购建议</span></p>
+    <div class="margin-top20">
+        <table class="table-box theme1" width="100%">
+            <thead>
+            <tr>
+                <th>产品名称</th>
+                <th>代码</th>
+                <th>申购费率</th>
+                <th>申购金额</th>
+                <th>渠道</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="title-tag margin-top20 text-bold font24"><img src="img/icon-1.png" width="22"><span>2019年6月21日赎回建议</span></p>
+    <div class="margin-top20">
+        <table class="table-box theme1" width="100%">
+            <thead>
+            <tr>
+                <th>产品名称</th>
+                <th>代码</th>
+                <th>申购费率</th>
+                <th>申购金额</th>
+                <th>渠道</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="margin-top20">
+        <table class="table-box theme2" width="100%">
+            <thead>
+            <tr>
+                <th>类别</th>
+                <th>权益类</th>
+                <th>债类+衍生品类</th>
+                <th>现金类</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>调仓前</td>
+                <td>49.17%</td>
+                <td>49.17%</td>
+                <td>49.17%</td>
+            </tr>
+            <tr>
+                <td>调仓后</td>
+                <td>39.9%</td>
+                <td>39.9%</td>
+                <td>39.9%</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <p class="title-tag margin-top20 text-bold font24"><img src="img/icon-1.png" width="22"><span>注意事项</span></p>
+    <p class="margin-top20">调仓方案对时间要求比较高，希望能2-3天内完成操作，服务期间您的专属理财团队会持续跟踪市场，在适当时机提醒您继续调整投资仓位。也请您在财务情况发生变化时，随时与我们联系。
+    </p>
+    <div class="margin-top20">
+        <div class="float-left text-bold margin-top20">
+            <p>专属专家导师：刘德华</p>
+            <p class=" margin-top20">专属理财顾问：梁朝伟</p>
+            <div class="artice-header margin-top20 text-bold">
+                <span class="span2">专业创造价值</span>
+                <span class="span1">新竹伴您财富成长</span>
+            </div>
+        </div>
+        <div class="float-right text-center">
+            <p><img src="img/code.jpeg" width="150" style="display: block;"></p>
+            <p style="padding-bottom: 20px;">官方微信公众号</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+

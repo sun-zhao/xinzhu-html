@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        html, body, div, span, applet, object, iframe,
+        h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+        a, abbr, acronym, address, big, cite, code,
+        del, dfn, em, img, ins, kbd, q, s, samp,
+        small, strike, strong, sub, sup, tt, var,
+        b, u, i, center,
+        dl, dt, dd, ol, ul, li,
+        fieldset, form, label, legend,
+        table, caption, tbody, tfoot, thead, tr, th, td,
+        article, aside, canvas, details, embed,
+        figure, figcaption, footer, header, hgroup,
+        menu, nav, output, ruby, section, summary,
+        time, mark, audio, video {
+            margin: 0;
+            padding: 0;
+            border: 0;
+            font-size: 100%;
+            font: inherit;
+            vertical-align: baseline;
+            font-family: "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif;
+        }
+
+        /* HTML5 display-role reset for older browsers */
+        article, aside, details, figcaption, figure,
+        footer, header, hgroup, menu, nav, section {
+            display: block;
+        }
+
+        body {
+            line-height: 1;
+            font-size: 26px;
+        }
+
+        ol, ul {
+            list-style: none;
+        }
+
+        blockquote, q {
+            quotes: none;
+        }
+
+        blockquote:before, blockquote:after,
+        q:before, q:after {
+            content: '';
+            content: none;
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        p {
+            line-height: 1.5em;
+        }
+
+        .color-black {
+            color: #000;
+        }
+
+        .color-light {
+            color: #666;
+        }
+
+        .text-bold {
+            font-weight: bold;
+        }
+
+        .color-info {
+            color: #0baf50;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .data-main {
+            width: 65%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .font30 {
+            font-size: 44px;
+        }
+
+        .font24 {
+            font-size: 38px;
+        }
+
+        .data-box {
+            background: #f4f4f4;
+            padding: 20px;
+        }
+
+        .margin-top10 {
+            margin-top: 10px;
+        }
+
+        .margin-top20 {
+            margin-top: 20px;
+        }
+        .margin-top40 {
+            margin-top: 40px;
+        }
+        .clearfix{*zoom:1;}
+        .clearfix:before,
+        .clearfix:after{display:table;line-height:0;content:"";}
+        .clearfix:after{clear:both;}
+        .photo-item{display:inline-block;width:162px;font-size:14px;margin:0 25px 25px 25px;float: left;}
+        .p-item{
+            width:162px;
+            height:162px;
+            display: inline-block;
+            background: #fff;
+            border-radius: 4px;
+            box-shadow: 0 0 3px rgba(0,0,0,.4);
+            padding:2px;
+
+        }
+        .p-item img{
+            width:50px;
+            height:50px;
+            display: block;
+            float: left;
+            margin:2px;
+        }
+        .photo-list div{
+            display: block;
+            width:150px;
+            float: left;
+            margin:0 25px 20px 5px;
+            font-size:14px;
+            text-align: center;
+            position: relative;
+        }
+        .photo-list .edit,.delete{
+            cursor: pointer;
+            position: absolute;
+            top:124px;
+            right:0;
+            background:rgba(0,0,0,.5);
+            padding:5px;
+            border-radius:4px;
+            color: #fff;
+            font-size:16px;
+        }
+        .photo-list .edit:hover,.delete:hover{background:rgba(0,0,0,.8);}
+        .delete{right:30px;}
+        .photo-list div{display: inline-block;}
+        .photo-list div img{width:100%;vertical-align: bottom;margin-bottom:5px;}
+        .load-more{display: inline-block;width:150px;height:110px;background: rgba(0,0,0,.2);color:#666;cursor: pointer;padding-top:40px;line-height:40px;text-align: center;}
+        .load-more i{font-size:30px;}
+        .load-more:hover,.back span:hover{opacity: 0.8;}
+        .load-more2{width:162px;height:122px;}
+        .back{padding-bottom:5px;margin-bottom:20px;border-bottom: 1px solid #ccc;font-size:18px;}
+        .back span{display: inline-block;background: #ccc; text-align: center;border-radius:4px;margin-right:10px;padding:0 10px;cursor: pointer;}
+    </style>
+</head>
+<body>
+<div class="data-main clearfix">
+    <div class="photo-item">
+        <div class="p-item">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+        </div>
+        <p class="text-center margin-top10">9九分资料图片</p>
+    </div>
+    <div class="photo-item">
+        <div class="p-item">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+        </div>
+        <p class="text-center margin-top10">9九分资料图片</p>
+    </div>
+    <div class="photo-item">
+        <div class="p-item">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+        </div>
+        <p class="text-center margin-top10">9九分资料图片</p>
+    </div>
+    <div class="photo-item">
+        <div class="p-item">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+        </div>
+        <p class="text-center margin-top10">9九分资料图片</p>
+    </div>
+    <div class="photo-item">
+        <div class="p-item">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/878fbf4a0854dc587ec140e5e4d180f6b578ba124d5d6-BkWQ9g_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/5fe4e93f73fcb5118e48da2f7d01b76b45ed14e62f74f-ytWwsG_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/cd1b90b54a4b369f98ddb25314e74da2cc070a1a4f50a-5RSHVB_fw658/format/webp">
+        </div>
+        <p class="text-center margin-top10">9九分资料图片</p>
+    </div>
+    <div class="photo-item">
+        <div class="p-item">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+            <img src="https://hbimg.huabanimg.com/6d04388ba295ca26c375ecc8f38eed36fe5336d480fd8-70RZRS_fw658/format/webp">
+
+        </div>
+        <p class="text-center margin-top10">9九分资料图片</p>
+    </div>
+    <div class="photo-item load-more load-more2">
+        <i class="el-icon-refresh"></i>
+        <p>加载更多</p>
+    </div>
+</div>
+<div class="data-main">
+    <p class="back"><span><i class="el-icon-back"></i></span>2020年4月份图册</p>
+    <div class="photo-list">
+        <div>
+            <span class="delete"><i class="el-icon-delete"></i></span>
+            <span class="edit"><i class="el-icon-edit"></i></span>
+            <p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595846813131&di=ecbb24c7c0e4dc0e41d04271eb6fdb7d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D75ce80d1f0deb48ffb69a1d6c01e3aef%2F3e3342a7d933c895597782cbd21373f08202000f.jpg"></p>
+            <p>9九分资料图片</p>
+        </div>
+        <div>
+            <span class="edit"><i class="el-icon-edit"></i></span>
+            <p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595846813131&di=ecbb24c7c0e4dc0e41d04271eb6fdb7d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D75ce80d1f0deb48ffb69a1d6c01e3aef%2F3e3342a7d933c895597782cbd21373f08202000f.jpg"></p>
+            <p>9九分资料图片</p>
+        </div>
+        <div>
+            <span class="edit"><i class="el-icon-edit"></i></span>
+            <p><img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1595846813131&di=ecbb24c7c0e4dc0e41d04271eb6fdb7d&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fforum%2Fw%3D580%2Fsign%3D75ce80d1f0deb48ffb69a1d6c01e3aef%2F3e3342a7d933c895597782cbd21373f08202000f.jpg"></p>
+            <p>9九分资料图片</p>
+        </div>
+        <div class="load-more">
+            <i class="el-icon-refresh"></i>
+            <p>加载更多</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
